@@ -1,0 +1,22 @@
+variable,count_informed,count_missing,%_missing,nunique,top,freq,mean,std,min,max,type
+customerid,7043,0,0.0,7043,0397-ZXWQF,1,,,,,object
+gender,7043,0,0.0,2,Male,3555,,,,,object
+seniorcitizen,7043,0,0.0,2,0,5901,,,,,object
+partner,7043,0,0.0,2,No,3641,,,,,object
+dependents,7043,0,0.0,2,No,4933,,,,,object
+tenure,7043,0,0.0,73,,,32.37114865824223,24.55948102309423,0,72,int64
+phoneservice,7043,0,0.0,2,Yes,6361,,,,,object
+multiplelines,7043,0,0.0,3,No,3390,,,,,object
+internetservice,7043,0,0.0,3,Fiber optic,3096,,,,,object
+onlinesecurity,7043,0,0.0,3,No,3498,,,,,object
+onlinebackup,7043,0,0.0,3,No,3088,,,,,object
+deviceprotection,7043,0,0.0,3,No,3095,,,,,object
+techsupport,7043,0,0.0,3,No,3473,,,,,object
+streamingtv,7043,0,0.0,3,No,2810,,,,,object
+streamingmovies,7043,0,0.0,3,No,2785,,,,,object
+contract,7043,0,0.0,3,Month-to-month,3875,,,,,object
+paperlessbilling,7043,0,0.0,2,Yes,4171,,,,,object
+paymentmethod,7043,0,0.0,4,Electronic check,2365,,,,,object
+monthlycharges,7043,0,0.0,1585,,,64.76169246059922,30.09004709767854,18.25,118.75,float64
+totalcharges,7043,0,0.0,6531, ,11,,,,,object
+churn,7043,0,0.0,2,,,0.2653698707936959,0.44156130512195013,0,1,int64
