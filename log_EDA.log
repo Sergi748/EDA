@@ -1,0 +1,9 @@
+2022-07-21 17:08:35,467 #### Proceso EDA iniciado
+2022-07-21 17:08:35,467 Leyendo dataset WA_Fn-UseC_-Telco-Customer-Churn.csv de la ruta Datos/
+2022-07-21 17:08:35,535 shape dataset: (7043, 21)
+2022-07-21 17:08:35,536 Cambiando los valores de la target churn utilizando el diccionario {'No': 0, 'Yes': 1}
+2022-07-21 17:08:35,539 En el dataset hay 3 vaiable numericas y 18 categoricas
+2022-07-21 17:08:35,557 Generando fichero csv con el analisis univariante
+2022-07-21 17:08:35,788 Variables que no se van a utilizar a la hora de generar las distintas graficas: (2, ['customerid', 'totalcharges'])
+2022-07-21 17:08:35,788 Finalmente, seran utilizadas para generar las distintas graficas 3 vaiables numericas y 16 variables categoricas
+2022-07-21 17:08:45,024 #### Proceso EDA finalizado
