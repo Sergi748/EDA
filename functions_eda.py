@@ -19,13 +19,15 @@ def get_parameters():
     pathFile = config['EDA']['pathFile']
     fileName = config['EDA']['fileName']
     target = config['EDA']['target']
-    sep = eval(config['EDA']['sep'] )
+    sep = eval(config['EDA']['sep'])
     dict_replace = eval(config['EDA']['dict_replace'])
     fromNumToCat = eval(config['EDA']['fromNumToCat'])
     fromCatToNum = eval(config['EDA']['fromCatToNum'])
-    varsNoPlot = eval(config['EDA']['varsNoPlot'] )
+    varsNoPlot = eval(config['EDA']['varsNoPlot'])
+    makePlots = eval(config['EDA']['makePlots'])
+    savePlots = eval(config['EDA']['savePlots'])
     
-    return pathProject, pathFile, fileName, target, sep, dict_replace, fromNumToCat, fromCatToNum, varsNoPlot
+    return pathProject, pathFile, fileName, target, sep, dict_replace, fromNumToCat, fromCatToNum, varsNoPlot, makePlots, savePlots
 
 
 class get_file_and_univ:
@@ -44,15 +46,8 @@ class get_file_and_univ:
     def __read_file(self):
 
         logging.info(f'Leyendo dataset {self.file} de la ruta {self.pathFile}')
-        if 's3' in self.pathFile:
-            df_dict = pd.read_csv(f'{self.pathFile}models/ChPy_cpl_03/dictionary.csv', sep='|')
-            varsTrue = df_dict[df_dict.USED == True]['FEATURE'].str.lower().tolist()
-            df = pd.read_csv(f'{self.pathFile}{self.file}', sep=self.sep, low_memory=False)\
-            .sample(frac=0.1, replace=False, random_state=22).reset_index(drop=True)\
-            [varsTrue]
-        else:
-            df = pd.read_csv(f'{self.pathFile}{self.file}', sep=self.sep)
-            df.columns = df.columns.str.lower()
+        df = pd.read_csv(f'{self.pathFile}{self.file}', sep=self.sep)
+        df.columns = df.columns.str.lower()
 
         logging.info(f'shape dataset: {df.shape}')
         return df
